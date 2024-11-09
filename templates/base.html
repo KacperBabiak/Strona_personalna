@@ -1,0 +1,35 @@
+{% load static %}
+<script src="{% static 'buttons.js' %}"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>{% block title %}Moje portolio{% endblock title %}</title>
+    <link
+        rel="stylesheet"
+        href="{% static 'style.css' %}"
+        
+    >
+</head>
+<body class="container">
+
+    
+    <div class="navbar">
+        
+        
+            <a class="left"> Kacper Babiak - strona personalna  </a>
+            
+            <a href="../#">Strona Główna</a>
+            <a href="../aboutme">O Mnie</a>
+            <a href="../projects">Projekty</a>
+            <a href="../contacts">Kontakt</a>
+        
+    </div>
+
+
+{% block page_content %}{% endblock page_content %}
+</body>
+</html>

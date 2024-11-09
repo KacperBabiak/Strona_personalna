@@ -1,0 +1,260 @@
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+
+body {
+  overflow-x: hidden;
+  padding: 1.3rem 4%;
+}
+
+.about{
+    margin-top: 30;
+}
+
+#my_photo{
+  width: 50%;
+  border: 5px solid  rgb(83, 114, 114);
+  box-shadow: 10px 10px rgb(60, 165, 165);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30;
+  padding: 5;
+  
+}
+
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 80%;
+  margin: auto;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 20px; /* Some padding */
+}
+
+
+.education  {
+    width : 80%;
+    background-color: #f1f1f1; 
+    margin: auto;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    box-shadow: rgba(60, 165, 165, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; 
+  }
+  
+  #huawei {
+    border-radius: 50%;
+    display: block;
+    margin-top: 50;
+    margin-bottom: 50;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  
+  .skills {
+    width : 80%;
+    background-color: #f1f1f1; 
+    margin: auto;
+  }
+  
+  .hobbies {
+    width : 80%;
+    background-color: #f1f1f1; 
+    margin: auto;
+  }
+
+  .ss-three-column-guttered-grid{
+    display:grid;
+    width: 70%;
+    margin: auto;
+  }
+
+  .tile-row{
+    display: flex;
+  }
+
+  .tile {
+    overflow: hidden;
+    margin: 20px;
+    position: relative;
+    width: 35%;
+    border: 5px solid  rgb(83, 114, 114);
+    box-shadow: 10px 10px rgb(60, 165, 165);
+    background-color: #f1f1f1; 
+
+    &:before {
+      content: '';
+      display: block;
+      opacity: 0;
+      position: relative;
+      padding-top: 100%;
+      visibility: hidden;
+      z-index: -2;
+    }
+    
+    .image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+    
+    .inner {
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: all 0.22s ease-in-out;
+      width: 100%;
+      
+      .header, .content, .footer {
+        flex-basis: 100%;
+      }
+      
+      .footer {
+        align-self: flex-end;
+      }
+    }
+  }
+  
+
+  .tile {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .tile .inner {
+    padding: 2.1rem;
+    
+    .header, .content {
+      text-align: center;
+    }
+  }
+  
+  
+
+  .content img {
+    box-shadow: 0 4px 12px -6px rgba(0,0,0,1);
+    display: inline-block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 200px;
+    width: auto;
+  }
+  
+ 
+  .footer {
+    text-align: left;
+  }
+  ul.ss.grid {
+    justify-content: flex-start;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    &.guttered.eight.column li {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+  
+  .header{
+    width: 10%;
+    
+    margin: auto;
+  }
+
+  #image-tile{
+    width: 50%;
+    
+  }
+  
+  
+  #flip-inner .tile {
+    perspective: 1000px;
+  }
+  #flip-inner .tile .inner {
+    transform-style: preserve-3d;
+    
+    &:after {
+      background-color: rgba(255,255,255,0.25);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+    
+    .header, .content, .footer, &:after {
+      backface-visibility: hidden;
+    }
+    
+    .header, .content, .footer {
+      transform: rotateY(180deg);
+      z-index: 0;
+    }
+  }
+  #flip-inner .tile:hover .inner {
+    background-color: rgba(0,0,0,0.25);
+    transform: rotateY(180deg);
+  }
+  
+  #flip .tile {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.22s ease-in-out;
+    
+    .image {
+      z-index: 2;
+    }
+    
+    .image, .inner {
+      backface-visibility: hidden;
+      
+    }
+    
+    .inner {
+      transform: rotateY(180deg);
+    }
+  }
+  #flip .tile:hover {
+    transform: rotateY(180deg);
+  }
+
+
+  .wrap{
+    overflow-wrap: break-word;
+    margin-left: 30%;
+  }

@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<link rel="stylesheet" href="{% static 'main.css' %}">
+<div class="welcome">
+    
+<img id='banner_main'src="{% static 'wordcloud.png' %}" alt="Main">
+
+<div class="text-shadow">
+<div class="welcome-text">
+    <h1 id="title">Witaj na mojej stronie!</h1>
+    <h3 id="introduction"> Nazywam się Kacper - uwielbiam dzielić się swoimi pomysłami </h3>
+    <p class="left">Celem tej strony jest danie mi możliwości przedstawienia efektów moich prac i podzielenia się swoimi zainteresowaniami :)) Dotyczy to przede wszystkim
+        analizy danych i innych projektów programistycznych, ale nie tylko. Uwielbiam wszystko co kreatywne, więc zawartość strony na pewno będzie się jeszcze poszerzać.</p>
+    <p class="left">Podstawowe informacje o tym kim jestem i co robię znajdują się w zakładce <a class="link" href="../aboutme">O Mnie</a>. Opisuje tam szczegóły moich umiejętności, trochę anegdotek oraz inne fakty z mojego życia</p>
+    <p class="left">Konkretne prace przedstawione są na podstronie <a class="link" href="../projects">Projekty</a>. Znajdują się tam dokładne opisy i prezentacje, często interaktywne.</p>
+    <p class="left">Jeśli chcesz się ze mną skontaktować w jakimkolwiek celu, użyj informacji z podstrony <a class="link" href="../contacts">Kontakt</a>.</p>
+
+</div>
+</div>
+
+            
+            
+            
+
+</div>
+
+
+{% endblock page_content %}
