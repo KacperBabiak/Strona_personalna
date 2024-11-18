@@ -4,17 +4,21 @@
 {% block page_content %}
 <link rel="stylesheet" href="{% static 'projects.css' %}">
 
+
+
+
 <div class="projects">
     <div class="single_project">
         <h1>Projekty</h1>
         {% for project in projects %}
             <div class="col-md-4">
                 <div class="card-mb-2">
+                    <h3 class="card-title">{{ project.title }}</h3>
                     {% if project.image %}
-                    <!--  <img class="card-img-top" src="{{ project.image.url }}"> -->
+                      <img class="card-img-top" src="{{ project.image.url }}"> 
                     {% endif %}
                     <div class="card-body">
-                        <h5 class="card-title">{{ project.title }}</h5>
+                        
                         <p class="card-text">{{ project.description }}</p>
                         <a href="{% url 'project_detail' project.pk %}"
                         class="btn btn-primary">
@@ -26,6 +30,8 @@
             {% endfor %}
     
     </div>
+
+<!-- 
     <div class="projects_list">
         <h2> Lista projektów </h2>
         {% for project in projects %}
@@ -42,6 +48,7 @@
             </div>
             {% endfor %}
     </div>
+-->
 </div>
 
 
